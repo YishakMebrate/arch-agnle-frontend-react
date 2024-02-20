@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Feature from './ui/Feature';
-import Footer from './ui/Footer';
-import Pricing from './ui/Pricing';
+import Feature from '@/ui/Feature';
+import Footer from '@/ui/Footer';
+import Pricing from '@/ui/Pricing';
 
 const navigation = [
   { name: 'Product', href: '#' },
