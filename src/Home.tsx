@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Feature from '@/ui/Feature';
 import Footer from '@/ui/Footer';
 import Pricing from '@/ui/Pricing';
+import { Counter } from '@/ui/Counter';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -141,8 +142,8 @@ export default function Home() {
           />
         </div>
       </div>
-
       <Feature />
+      <Counter />
       <Pricing />
       <Footer />
     </div>
