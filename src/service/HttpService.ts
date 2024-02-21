@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-const baseUrl = '';
+const baseUrl = 'https://restcountries.com';
 
-export const getRequest = (path: string, token: string, queryString = '') => {
+export const getRequest = (path: string, queryString = '') => {
   const headers = {
-    Authorization: 'Bearer ' + token,
     ContentType: 'application/json',
     Accept: 'application/json',
   };
@@ -12,9 +11,8 @@ export const getRequest = (path: string, token: string, queryString = '') => {
   return axios.get(baseUrl + path + queryString, { headers: headers });
 };
 
-export const postRequest = (path: string, token: string, payload: never, queryString = '') => {
+export const postRequest = (path: string, payload: never, queryString = '') => {
   const headers = {
-    Authorization: 'Bearer ' + token,
     ContentType: 'application/json',
     Accept: 'application/json',
   };
