@@ -12,7 +12,9 @@ export const Counter = () => {
   return (
     <div className="bg-white pb-24 sm:pb-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h1 className="h1">Redux</h1>
+        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center mb-5">
+          Redux
+        </p>
         <div className="mx-auto flex justify-center">
           <button
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -33,7 +35,7 @@ export const Counter = () => {
 
         <div className="py-5 mx-auto flex justify-center">
           <input
-            className="w-36 px-3 mr-3 bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 focus-visible:outline-0 ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="w-36 px-3 mr-3 bg-white block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 focus-visible:outline-0 ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
             aria-label="Set increment amount"
             value={incrementAmount}
             onChange={(e) => setIncrementAmount(Number(e.target.value ?? 0))}
