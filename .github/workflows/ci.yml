@@ -1,4 +1,6 @@
-on: push
+on:
+  push:
+    branches: master
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -6,12 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'
+      - name: Setp up pnpm@8
         uses: pnpm/action-setup@v3
         with:
           version: 8
@@ -29,3 +28,5 @@ jobs:
           server: ${{ secrets.SERVER }}
           username: ${{ secrets.FTP_TEST_USERNAME }}
           password: ${{ secrets.FTP_TEST_PASSWORD }}
+          dangerous-clean-slate: true
+          local-dir: ./dist/
