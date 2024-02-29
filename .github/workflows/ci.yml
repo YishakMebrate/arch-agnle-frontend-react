@@ -8,6 +8,11 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Use PNPM 8
         uses: pnpm/action-setup@v3
         with:
@@ -21,7 +26,7 @@ jobs:
           pnpm run build
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.SERVER }}
           username: ${{ secrets.FTP_TEST_USERNAME }}
