@@ -20,7 +20,7 @@ const metadata = {
 
 export default function Home() {
   document.title = metadata.title;
-  document.description = metadata.description;
+  // document.description = metadata.description;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
